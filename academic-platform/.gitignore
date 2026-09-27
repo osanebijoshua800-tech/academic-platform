@@ -1,0 +1,15 @@
+# Environment variables (Stripe keys, secrets, DB strings)
+.env
+
+# Dependencies
+node_modules/
+
+# SQLite Databases & Storage
+*.sqlite
+*.sqlite3
+*.db
+uploads/
+
+# Logs & System Files
+npm-debug.log*
+.DS_Store
