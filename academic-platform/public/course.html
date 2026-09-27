@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course View & Real-Time Classroom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans justify-between">
+
+    <!-- Header -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="dashboard.html" class="text-indigo-400 hover:text-indigo-300 font-semibold text-sm">&larr; Back to
+                Dashboard</a>
+            <span id="user-display" class="text-sm font-semibold text-slate-300"></span>
+        </div>
+    </header>
+
+    <!-- Main Classroom Content -->
+    <main class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-3 gap-8 flex-1 w-full">
+
+        <!-- Left Column -->
+        <div class="lg:col-span-2 space-y-8">
+            <div class="glass-dark p-8 rounded-3xl border border-slate-800 shadow-2xl space-y-3">
+                <div class="flex justify-between items-start flex-wrap gap-4">
+                    <div>
+                        <h1 id="course-title" class="text-3xl font-extrabold text-white">Loading...</h1>
+                        <p id="course-desc" class="text-slate-400 leading-relaxed mt-2"></p>
+                    </div>
+                    <div id="certificate-action"></div>
+                </div>
+            </div>
+
+            <!-- Instructor Create Assignment Panel -->
+            <div id="instructor-assignment-panel"
+                class="hidden glass-dark p-6 rounded-2xl border border-slate-800 space-y-4">
+                <h3 class="text-lg font-bold text-indigo-300">➕ Create New Assignment</h3>
+                <form id="create-assignment-form" class="space-y-3">
+                    <input type="text" id="assign-title" placeholder="Assignment Title" required
+                        class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+                    <textarea id="assign-desc" placeholder="Assignment Instructions" required
+                        class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500"></textarea>
+                    <button type="submit"
+                        class="gradient-bg text-white font-medium py-2 px-6 rounded-xl text-sm transition">Publish
+                        Assignment</button>
+                </form>
+            </div>
+
+            <!-- Assignments Container -->
+            <div class="glass-dark p-8 rounded-3xl border border-slate-800 space-y-6">
+                <h2 class="text-xl font-bold text-white border-b border-slate-800 pb-3">Course Assignments</h2>
+                <div id="assignments-container" class="space-y-4">
+                    <p class="text-slate-400">Loading assignments...</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Live Chat -->
+        <div class="glass-dark p-6 rounded-3xl border border-slate-800 flex flex-col h-[600px] shadow-2xl">
+            <h2
+                class="text-lg font-bold text-white border-b border-slate-800 pb-3 mb-4 flex items-center justify-between">
+                💬 Live Course Chat
+                <span class="inline-block w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
+            </h2>
+
+            <div id="chat-box" class="flex-1 overflow-y-auto space-y-3 pr-2 mb-4"></div>
+
+            <form id="chat-form" class="flex gap-2 border-t border-slate-800 pt-3">
+                <input type="text" id="chat-input" placeholder="Type a message..." required
+                    class="flex-1 bg-slate-900 border border-slate-800 rounded-xl px-4 py-2 text-sm text-white focus:outline-none focus:border-indigo-500">
+                <button type="submit"
+                    class="gradient-bg text-white font-medium px-4 py-2 rounded-xl text-sm">Send</button>
+            </form>
+        </div>
+
+    </main>
+
+    <!-- Classroom Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900/60 w-full mt-auto">
+        <div
+            class="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <p>&copy; 2026 Academic Platform. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="dashboard.html" class="hover:text-indigo-400 transition">Dashboard</a>
+                <a href="#" class="hover:text-indigo-400 transition">Privacy Policy</a>
+                <a href="#" class="hover:text-indigo-400 transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

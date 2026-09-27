@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Transitions */
+body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300;
+}
+
+/* Glassmorphism Cards for Light Mode */
+.glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-slate-200/80 shadow-xl transition-all duration-300;
+}
+
+/* Dark Mode Theme Overrides */
+.dark body {
+    @apply bg-slate-950 text-slate-100;
+}
+
+.dark .glass-card {
+    @apply bg-slate-900/80 border-slate-800 shadow-2xl;
+}
+
+/* Gradient Button Accent */
+.gradient-bg {
+    background: linear-gradient(135deg, #6366f1 0%, #a855f7 100%);
+}

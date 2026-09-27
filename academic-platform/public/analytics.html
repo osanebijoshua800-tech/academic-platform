@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Analytics & Progress</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: system-ui, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #f4f6f8;
+            color: #333;
+        }
+
+        header {
+            background: #1a202c;
+            color: white;
+            padding: 1.25rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .card {
+            background: white;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        }
+
+        .progress-bar-container {
+            background: #e2e8f0;
+            border-radius: 12px;
+            height: 18px;
+            width: 100%;
+            overflow: hidden;
+            margin: 0.5rem 0 1rem;
+        }
+
+        .progress-bar-fill {
+            background: #38a169;
+            height: 100%;
+            transition: width 0.3s ease;
+        }
+
+        .btn {
+            background: #3182ce;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: #2b6cb0;
+        }
+
+        .btn-cert {
+            background: #d69e2e;
+        }
+
+        .btn-cert:hover {
+            background: #b7791f;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        th,
+        td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #edf2f7;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <a href="dashboard.html" style="color: #cbd5e0; text-decoration: none; font-size: 0.9rem;">&larr; Back to
+                Dashboard</a>
+            <h2 style="margin-top: 0.25rem;">Student Analytics</h2>
+        </div>
+        <div>
+            <span id="user-display"></span>
+            <button id="logout-btn" class="btn" style="background: #e53e3e; margin-left: 1rem;">Logout</button>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <h3>Course Completion Progress</h3>
+            <div id="course-analytics-container" style="margin-top: 1rem;">Loading analytics...</div>
+        </div>
+
+        <div class="card">
+            <h3>Quiz Performance History</h3>
+            <div id="quiz-history-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Assessment</th>
+                            <th>Score</th>
+                            <th>Percentage</th>
+                            <th>Date</th>
+                        </tr>
+                    </thead>
+                    <tbody id="quiz-history-rows">
+                        <tr>
+                            <td colspan="5">Loading history...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

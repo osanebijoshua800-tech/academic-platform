@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Academic Platform - Learning & Collaboration</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="bg-slate-950 text-slate-100 min-h-screen flex flex-col font-sans justify-between">
+
+    <!-- Header / Navigation Bar -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-lg font-bold text-indigo-400">🎓 Academic Platform</a>
+            <nav class="hidden md:flex items-center space-x-6 text-xs text-slate-300 font-medium">
+                <a href="#features" class="hover:text-indigo-400 transition">Features</a>
+                <a href="#about" class="hover:text-indigo-400 transition">About Us</a>
+                <a href="#blog" class="hover:text-indigo-400 transition">Blog</a>
+                <a href="#faq" class="hover:text-indigo-400 transition">FAQ</a>
+            </nav>
+            <a href="#auth-section"
+                class="gradient-bg text-white px-4 py-2 rounded-xl text-xs font-semibold shadow-md transition">Get
+                Started</a>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-7xl mx-auto px-6 py-12 flex-1 w-full space-y-24">
+
+        <!-- Hero & Authentication Section -->
+        <section id="auth-section" class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div class="space-y-6">
+                <span
+                    class="text-xs font-semibold uppercase tracking-widest text-indigo-400 bg-indigo-950/60 border border-indigo-800/50 px-3 py-1.5 rounded-full">Empowering
+                    Modern Education</span>
+                <h1 class="text-4xl sm:text-5xl font-black text-white leading-tight">Master Skills with Interactive Live
+                    Classrooms</h1>
+                <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                    Access course materials, submit assignments seamlessly, collaborate in real time with tutors and
+                    peers, and earn verifiable certificates upon completion.
+                </p>
+                <div class="flex items-center space-x-4 pt-2">
+                    <a href="#features"
+                        class="text-xs font-semibold text-slate-300 hover:text-indigo-400 transition">Explore Features
+                        &rarr;</a>
+                </div>
+            </div>
+
+            <!-- Auth Form Card -->
+            <div class="max-w-md w-full mx-auto lg:ml-auto">
+                <div class="glass-dark p-8 rounded-3xl border border-slate-800 shadow-2xl space-y-6">
+                    <div class="text-center space-y-2">
+                        <h2 id="form-title" class="text-2xl font-extrabold text-white">Login to Account</h2>
+                        <p class="text-xs text-slate-400">Welcome back! Sign in to access your portal.</p>
+                    </div>
+
+                    <form id="auth-form" class="space-y-4">
+                        <div id="name-group" class="hidden space-y-1">
+                            <label class="text-xs text-slate-400 font-medium">Full Name</label>
+                            <input type="text" id="name" placeholder="John Doe"
+                                class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs text-slate-400 font-medium">Email Address</label>
+                            <input type="email" id="email" placeholder="user@example.com" required
+                                class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+                        </div>
+
+                        <div class="space-y-1">
+                            <label class="text-xs text-slate-400 font-medium">Password</label>
+                            <input type="password" id="password" placeholder="••••••••" required
+                                class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+                        </div>
+
+                        <div id="role-group" class="hidden space-y-1">
+                            <label class="text-xs text-slate-400 font-medium">Account Role</label>
+                            <select id="role"
+                                class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-2.5 text-sm text-white focus:outline-none focus:border-indigo-500">
+                                <option value="student">Student</option>
+                                <option value="tutor">Tutor</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" id="submit-btn"
+                            class="w-full gradient-bg text-white font-medium py-3 rounded-xl text-sm transition shadow-lg mt-2">Login</button>
+                    </form>
+
+                    <div class="text-center pt-2">
+                        <a href="#" id="toggle-auth"
+                            class="text-xs text-indigo-400 hover:text-indigo-300 transition">Need an account?
+                            Register</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Platform Features Section -->
+        <section id="features" class="space-y-10">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <h2 class="text-3xl font-extrabold text-white">Everything You Need to Excel</h2>
+                <p class="text-sm text-slate-400">Designed specifically for seamless communication between students and
+                    educators.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="glass-dark p-8 rounded-3xl border border-slate-800 space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-2xl">
+                        💬</div>
+                    <h3 class="text-lg font-bold text-white">Real-Time Classroom Chat</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Engage live with peers and tutors using instant
+                        Socket.IO messaging rooms for each course module.</p>
+                </div>
+
+                <div class="glass-dark p-8 rounded-3xl border border-slate-800 space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-2xl">
+                        📂</div>
+                    <h3 class="text-lg font-bold text-white">Assignment Submissions</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Upload solution files directly to course
+                        assignments and receive timely feedback from course tutors.</p>
+                </div>
+
+                <div class="glass-dark p-8 rounded-3xl border border-slate-800 space-y-4">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-2xl">
+                        🎓</div>
+                    <h3 class="text-lg font-bold text-white">Instant Completion Certificates</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">Generate personalized, high-resolution PDF
+                        completion certificates directly from your student dashboard.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="glass-dark p-10 rounded-3xl border border-slate-800 space-y-6">
+            <div class="max-w-3xl space-y-4">
+                <span class="text-xs font-semibold uppercase tracking-widest text-indigo-400">About Our Platform</span>
+                <h2 class="text-3xl font-extrabold text-white">Bridging the Gap Between Online Learning & Direct
+                    Mentorship</h2>
+                <p class="text-sm text-slate-300 leading-relaxed">
+                    Founded with a vision to streamline digital education, Academic Platform combines real-time
+                    WebSockets, responsive design, and robust security to create an intuitive learning environment.
+                    Whether you are a student aiming to learn practical full-stack software development or an instructor
+                    organizing coursework, our platform delivers an end-to-end interactive experience.
+                </p>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="space-y-10">
+            <div class="text-center max-w-2xl mx-auto space-y-3">
+                <h2 class="text-3xl font-extrabold text-white">Latest News & Blog Articles</h2>
+                <p class="text-sm text-slate-400">Insights, learning guides, and platform updates from our team.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Article 1 -->
+                <article
+                    class="glass-dark rounded-3xl border border-slate-800 overflow-hidden space-y-4 flex flex-col justify-between p-6">
+                    <div class="space-y-3">
+                        <span
+                            class="text-[10px] uppercase tracking-wider font-semibold text-indigo-400 bg-indigo-950/80 px-2.5 py-1 rounded-md">Guides</span>
+                        <h3 class="text-base font-bold text-white hover:text-indigo-400 transition cursor-pointer">5
+                            Essential Habits for Online Learning Success</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">Maximize your focus and stay organized while
+                            navigating distance learning environments.</p>
+                    </div>
+                    <div class="text-[11px] text-slate-500 pt-3 border-t border-slate-800/80">Published Sept 2026 • 4
+                        min read</div>
+                </article>
+
+                <!-- Article 2 -->
+                <article
+                    class="glass-dark rounded-3xl border border-slate-800 overflow-hidden space-y-4 flex flex-col justify-between p-6">
+                    <div class="space-y-3">
+                        <span
+                            class="text-[10px] uppercase tracking-wider font-semibold text-purple-400 bg-purple-950/80 px-2.5 py-1 rounded-md">Technology</span>
+                        <h3 class="text-base font-bold text-white hover:text-indigo-400 transition cursor-pointer">How
+                            Real-Time WebSockets Enhance Student Engagement</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">A look under the hood at Socket.IO integration
+                            for live classrooms and instant notification systems.</p>
+                    </div>
+                    <div class="text-[11px] text-slate-500 pt-3 border-t border-slate-800/80">Published Aug 2026 • 6 min
+                        read</div>
+                </article>
+
+                <!-- Article 3 -->
+                <article
+                    class="glass-dark rounded-3xl border border-slate-800 overflow-hidden space-y-4 flex flex-col justify-between p-6">
+                    <div class="space-y-3">
+                        <span
+                            class="text-[10px] uppercase tracking-wider font-semibold text-emerald-400 bg-emerald-950/80 px-2.5 py-1 rounded-md">Career</span>
+                        <h3 class="text-base font-bold text-white hover:text-indigo-400 transition cursor-pointer">
+                            Showcasing Your Verified Certificates to Employers</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">How to add course completion credentials to
+                            your technical portfolio and resume.</p>
+                    </div>
+                    <div class="text-[11px] text-slate-500 pt-3 border-t border-slate-800/80">Published Jul 2026 • 3 min
+                        read</div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl font-bold text-white">What Our Users Say</h2>
+                <p class="text-sm text-slate-400">Discover how students and tutors are succeeding on our platform.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-dark p-6 rounded-2xl border border-slate-800 space-y-4 flex flex-col justify-between">
+                    <p class="text-slate-300 text-sm leading-relaxed">"The real-time course chat and instant assignment
+                        feedback made completing my coursework effortless. I downloaded my verified certificate right
+                        away!"</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-slate-800/60">
+                        <div
+                            class="w-10 h-10 rounded-full bg-indigo-600 flex items-center justify-center text-white font-bold text-sm">
+                            OJ</div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-white">Osanebi Joshua</h4>
+                            <p class="text-xs text-slate-400">Computer Science Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-dark p-6 rounded-2xl border border-slate-800 space-y-4 flex flex-col justify-between">
+                    <p class="text-slate-300 text-sm leading-relaxed">"As an instructor, publishing assignments and
+                        reviewing student submissions in real time has cut down administrative overhead completely."</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-slate-800/60">
+                        <div
+                            class="w-10 h-10 rounded-full bg-purple-600 flex items-center justify-center text-white font-bold text-sm">
+                            AM</div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-white">Alex Morgan</h4>
+                            <p class="text-xs text-slate-400">Lead Web Development Tutor</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-dark p-6 rounded-2xl border border-slate-800 space-y-4 flex flex-col justify-between">
+                    <p class="text-slate-300 text-sm leading-relaxed">"The UI is sleek, modern, and super responsive.
+                        Collaborating with peers during live lectures makes distance learning feel genuinely
+                        interactive."</p>
+                    <div class="flex items-center space-x-3 pt-2 border-t border-slate-800/60">
+                        <div
+                            class="w-10 h-10 rounded-full bg-emerald-600 flex items-center justify-center text-white font-bold text-sm">
+                            SL</div>
+                        <div>
+                            <h4 class="text-sm font-semibold text-white">Sarah Chen</h4>
+                            <p class="text-xs text-slate-400">Full-Stack Bootcamp Student</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="max-w-3xl mx-auto w-full space-y-8">
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl font-bold text-white">Frequently Asked Questions</h2>
+                <p class="text-sm text-slate-400">Everything you need to know about getting started.</p>
+            </div>
+
+            <div class="space-y-4">
+                <details class="glass-dark border border-slate-800 rounded-2xl p-5 cursor-pointer group">
+                    <summary class="font-semibold text-white flex justify-between items-center text-sm">
+                        How do I earn and download my completion certificate?
+                        <span class="text-indigo-400 transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-3 text-xs text-slate-400 leading-relaxed">
+                        Once you enroll in a course as a student, you can access the certificate option inside your
+                        classroom view and download a high-resolution PDF certificate directly from your browser.
+                    </p>
+                </details>
+
+                <details class="glass-dark border border-slate-800 rounded-2xl p-5 cursor-pointer group">
+                    <summary class="font-semibold text-white flex justify-between items-center text-sm">
+                        What is the difference between Student and Tutor accounts?
+                        <span class="text-indigo-400 transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-3 text-xs text-slate-400 leading-relaxed">
+                        Students can view course modules, submit assignment files, participate in live chat rooms, and
+                        generate certificates. Tutors have additional permissions to create assignments, publish
+                        instructions, and review student submissions.
+                    </p>
+                </details>
+
+                <details class="glass-dark border border-slate-800 rounded-2xl p-5 cursor-pointer group">
+                    <summary class="font-semibold text-white flex justify-between items-center text-sm">
+                        Are live classrooms and chats updated in real time?
+                        <span class="text-indigo-400 transition group-open:rotate-180">▼</span>
+                    </summary>
+                    <p class="mt-3 text-xs text-slate-400 leading-relaxed">
+                        Yes! Built with Socket.IO technology, messages and activity updates are instantly broadcasted to
+                        all active participants in the classroom room without needing to reload the page.
+                    </p>
+                </details>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Front Page Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900/60 w-full mt-auto">
+        <div
+            class="max-w-7xl mx-auto px-6 py-6 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-500">
+            <p>&copy; 2026 Academic Platform. All rights reserved.</p>
+            <div class="flex gap-6">
+                <a href="#about" class="hover:text-indigo-400 transition">About Us</a>
+                <a href="#blog" class="hover:text-indigo-400 transition">Blog</a>
+                <a href="#" class="hover:text-indigo-400 transition">Privacy Policy</a>
+                <a href="#" class="hover:text-indigo-400 transition">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
